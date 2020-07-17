@@ -150,10 +150,10 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/recetas">
-          <Recetas recetas={recetas} setRecetas={setRecetas} />
+          <Recetas recetas={recetas} setRecetas={setRecetas} comentarios={comentariosRecetas} setComentarios={setComentariosRecetas} />
         </Route>
         <Route exact path="/productos">
-          <Productos productos={productos} setProductos={setProductos} />
+          <Productos productos={productos} setProductos={setProductos} setCarrito={setCarrito} />
         </Route>
         <Route exact path="/login" component={Login} />
         <Route exact path="/signup" component={Signup} />
