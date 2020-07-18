@@ -31,7 +31,6 @@ export default function PostsList(props) {
                     Add Post
                 </Button>
             </Link>
-
         </div>
     )
 }
