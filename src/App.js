@@ -2,30 +2,41 @@ import React, { useState } from 'react'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Switch, Route } from 'react-router-dom'
+import "bootstrap/dist/css/bootstrap.min.css";
 import Home from './components/Home'
 import NavBar from './components/NavBar'
 import Footer from './components/Footer'
 
 import Recetas from './components/Recetas'
 import Productos from './components/Productos'
-
 import Login from './components/Login'
 import Signup from './components/Signup'
 import Forgot from './components/Forgot'
 import Carrito from './components/Carrito'
+import PostsList from './components/PostsList'
+import AddPostForm from './components/AddPostForm'
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
 
   const carousel = {
     items: [{
       id: "1",
-      img: "http://img1",
-      link: "http://www.google.com"
+      img: "https://recetasveganas.net/wp-content/uploads/2020/07/recetas-tacos-sin-carne-vegetariano-alubias-aguacate-tomate-olivas2-1100x663.jpg",
+      alt: "Sección de recetas",
+      title: "Nuestras recetas",
+      subtitle: "je<ndfsksfw",
+      cta: "Ver recetas",
+      link: "/recetas"
     },
     {
       id: "2",
-      img: "http://img2",
-      link: "http://www.google.com"
+      img: "https://recetasveganas.net/wp-content/uploads/2020/07/pancakes-calabaza-veganos-faciles-receta-vegetariana-sin-huevo2-1100x663.jpg",
+      alt: "Sección de productos",
+      title: "Nuestros productos",
+      subtitle: "alskfnlas",
+      cta: "Ver productos",
+      link: "/productos"
     }]
   }
 
@@ -167,6 +178,7 @@ function App() {
         <Route exact path="/signup" component={Signup} />
         <Route exact path="/forgot" component={Forgot} />
         <Route exact path="/carrito" component={Carrito} />
+        <Route exact path="/posts/add" component={AddPostForm} />
       </Switch>
       <Footer/>
     </div>
