@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import './App.css'
 import { Switch, Route } from 'react-router-dom'
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -9,6 +9,9 @@ import Login from './components/Login'
 import Signup from './components/Signup'
 import Forgot from './components/Forgot'
 import Carrito from './components/Carrito'
+import PostsList from './components/PostsList'
+import AddPostForm from './components/AddPostForm'
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
 
@@ -158,7 +161,8 @@ function App() {
       <Switch>
 
         <Route exact path="/">
-          <Home carouselData={carousel} ads={ads}  />
+          <Home carouselData={carousel} ads={ads} />
+          <PostsList posts={posts} />
         </Route>
 
         <Route exact path="/recetas">
@@ -171,6 +175,7 @@ function App() {
         <Route exact path="/signup" component={Signup} />
         <Route exact path="/forgot" component={Forgot} />
         <Route exact path="/carrito" component={Carrito} />
+        <Route exact path="/posts/add" component={AddPostForm} />
       </Switch>
     </div>
   );
