@@ -59,3 +59,10 @@ footer ul{
     margin: 10px;
     font-size: 40px
 }
+
+.collapse-content .fa.fa-heart:hover {
+    color: #f44336 !important;
+}
+.collapse-content .fa.fa-share-alt:hover {
+    color: #0d47a1 !important;
+}
