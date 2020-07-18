@@ -4,7 +4,7 @@ import { Switch, Route } from 'react-router-dom'
 import Home from './components/Home'
 import Recetas from './components/Recetas'
 import Productos from './components/Productos'
-
+import "bootstrap/dist/css/bootstrap.min.css";
 import Login from './components/Login'
 import Signup from './components/Signup'
 import Forgot from './components/Forgot'
@@ -150,7 +150,7 @@ function App() {
       <Switch>
 
         <Route exact path="/">
-          <Home carouselData={carousel} ads={ads}  />
+          <Home carouselData={carousel} ads={ads} posts={posts} setPosts={setPosts}  />
         </Route>
 
         <Route exact path="/recetas">
