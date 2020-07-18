@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import  { Redirect } from "react-router-dom"
+import "./Signup.css"
 
 export class Signup extends Component {
     constructor (props) {
@@ -40,15 +41,15 @@ export class Signup extends Component {
 
     render() {
         return (
-            <div>
-                 <form onSubmit={this.handleSubmit}>
-                  <label>Email:</label>
-                  <input onChange={this.handleChange} type="email" name="email" value={this.state.email} />
+            <div >
+                 <form className="formSignup" onSubmit={this.handleSubmit}>
+                  <label className="signupElement"><b> Email:</b></label>
+                  <input  className="signupElement" onChange={this.handleChange} type="email" name="email" value={this.state.email} />
 
-                  <label>Contraseña:</label>
-                  <input onChange={this.handleChange}  type="text" name="password" value={this.state.password} />
+                  <label  className="signupElement"><b>Contraseña:</b> </label>
+                  <input  className="signupElement" onChange={this.handleChange}  type="text" name="password" value={this.state.password} />
          
-                  <input type="submit" value="Enviar" />
+                  <input className="submitButton" type="submit" value="Enviar" />
                      {this.renderRedirect()}
             </form>
             </div>
