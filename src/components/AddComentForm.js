@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import {Form, Button} from 'react-bootstrap';
+import {userHistory} from 'react-router-dom'
 
 const AddComentForm = (props) => {
     const initialState = {
@@ -8,7 +9,7 @@ const AddComentForm = (props) => {
             title: '',
             description: ''
     }
-
+    const {push} = userHistory();
     const [newComent, setComent] = useState(initialState)
     
     const handleOnChange = (event) => {
@@ -26,7 +27,7 @@ const AddComentForm = (props) => {
         props.setComentariosRecetas({
             items : commentList,
         })
-        
+        push('/recetas')
     }
 
     return (
