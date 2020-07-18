@@ -1,7 +1,11 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Switch, Route } from 'react-router-dom'
 import Home from './components/Home'
+import NavBar from './components/NavBar'
+import Footer from './components/Footer'
+
 import Recetas from './components/Recetas'
 import Productos from './components/Productos'
 
@@ -146,11 +150,11 @@ function App() {
 
   return (
     <div>
-      <h1>Navbar aqui</h1>
+      <NavBar />
       <Switch>
 
         <Route exact path="/">
-          <Home carouselData={carousel} ads={ads}  />
+          <Home carouselData={carousel} ads={ads} />
         </Route>
 
         <Route exact path="/recetas">
@@ -164,6 +168,7 @@ function App() {
         <Route exact path="/forgot" component={Forgot} />
         <Route exact path="/carrito" component={Carrito} />
       </Switch>
+      <Footer/>
     </div>
   );
 }
