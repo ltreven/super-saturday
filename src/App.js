@@ -9,7 +9,7 @@ import Login from './components/Login'
 import Signup from './components/Signup'
 import Forgot from './components/Forgot'
 import Carrito from './components/Carrito'
-
+import Cart from './components/Cart'
 function App() {
 
   const carousel = {
@@ -147,6 +147,8 @@ function App() {
   return (
     <div>
       <h1>Navbar aqui</h1>
+      <Cart carrito={carritoInitial}/>
+     
       <Switch>
 
         <Route exact path="/">
