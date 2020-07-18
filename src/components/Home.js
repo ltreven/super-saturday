@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import AddPostForm from './AddPostForm';
+import HomeCarousel from './HomeCarousel'
 
 function Home(props) {
     const {posts, setPosts} = props;
@@ -20,6 +21,7 @@ function Home(props) {
             <br />
             <Link to="/recetas">Recetas</Link>
             <br />
+            <HomeCarousel carouselData={props.carouselData}/>
             <AddPostForm posts={posts} setPosts={setPosts} />
         </div>
     )
