@@ -4,11 +4,11 @@ import { Switch, Route } from 'react-router-dom'
 import Home from './components/Home'
 import Recetas from './components/Recetas'
 import Productos from './components/Productos'
-
 import Login from './components/Login'
-import Signup from './components/Signup'
+import Signup from './components/Signup/Signup'
 import Forgot from './components/Forgot'
 import Carrito from './components/Carrito'
+import AccountCreated from "./components/Signup/AccountCreated"
 
 function App() {
 
@@ -161,6 +161,7 @@ function App() {
         </Route>
         <Route exact path="/login" component={Login} />
         <Route exact path="/signup" component={Signup} />
+        <Route exact path="/account-created" component={AccountCreated} />
         <Route exact path="/forgot" component={Forgot} />
         <Route exact path="/carrito" component={Carrito} />
       </Switch>
