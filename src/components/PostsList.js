@@ -1,27 +1,32 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { Card, Button } from 'react-bootstrap'
 
 
 
 export default function PostsList(props) {
-    console.log("posts: ", props.posts)
+    console.log("user: ", props.user)
     return (
         <div className="PostCard-container">
             {props.posts.items.map(post =>
-                <Card.Body
-                    key={post.id}
-                >
-                    <Card.Title>{post.title}</Card.Title>
-                    <Card.Text>{post.description}</Card.Text>
-                </Card.Body>
+                <Card key={post.id}
+                    style={{ width: '250px' }}>
+                    <Card.Body
+                    >
+                        <Card.Title>{post.title}</Card.Title>
+                        <Card.Subtitle className="mb-2 text-muted">
+                            Author: {props.user}
+                        </Card.Subtitle>
+                        <Card.Text>{post.description}</Card.Text>
+                        <hr />
+                    </Card.Body>
+                </Card>
             )}
 
-            <Link to='/posts/add'>
-                <Button variant="warning">
+            <Card.Link to='/posts/add'>
+                <Button variant="outline-info" size='sm'>
                     Add Post
                 </Button>
-            </Link>
+            </Card.Link>
         </div>
     )
 }
