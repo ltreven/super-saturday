@@ -1,18 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import AdsContainer from './AdsContainer'
 
 function Home(props) {
 
     console.log("Natalia, aqui están los datos de tu carousel: ", props.carouselData)
-
-    const scrollableAds = [...props.ads.items].map(ad => {
-        console.log(ad.img)
-        return (
-            <li key={ad.id} >
-                <a href={ad.link}><img src={ad.img}/></a>
-            </li>
-        )
-    })
 
     return (
         <div>
@@ -29,9 +21,7 @@ function Home(props) {
             <br />
             <Link to="/recetas">Recetas</Link>
             <br />
-            <div className="adsContainer">
-                {scrollableAds}
-            </div>
+            <AdsContainer ads={props.ads} />
         </div>
     )
 }
