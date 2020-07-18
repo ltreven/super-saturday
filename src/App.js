@@ -14,11 +14,13 @@ import Login from './components/Login';
 import Signup from './components/Signup/Signup';
 import Forgot from './components/Forgot';
 import Carrito from './components/Carrito';
+import Cart from './components/Cart';
+import NuevoProducto from './components/NuevoProducto';
 import AccountCreated from './components/Signup/AccountCreated';
 import AddReceta from './components/AddReceta';
 import PostsList from './components/PostsList';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import AddPostForm from './components/AddPostForm';
-//import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
 	const carousel = {
@@ -74,6 +76,107 @@ function App() {
 				img: 'http://img2',
 				title: 'titulo de la noticia',
 				description: 'descripcion de la noticia',
+			},
+		],
+	};
+
+	const postsInitial = {
+		items: [
+			{
+				id: '1',
+				title: 'titulo del post',
+				description: 'descripcion del post',
+			},
+			{
+				id: '2',
+				title: 'titulo del post',
+				description: 'descripcion del post',
+			},
+		],
+	};
+
+	const carousel = {
+		items: [
+			{
+				id: '1',
+				img:
+					'https://images.unsplash.com/photo-1551818905-29c07d4802d0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1728&q=80',
+				alt: 'Sección de recetas',
+				title: 'Nuestras recetas',
+				subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+				cta: 'Ver recetas',
+				link: '/recetas',
+			},
+			{
+				id: '2',
+				img:
+					'https://images.unsplash.com/photo-1526470498-9ae73c665de8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1204&q=80',
+				alt: 'Sección de productos',
+				title: 'Nuestros productos',
+				subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+				cta: 'Ver productos',
+				link: '/productos',
+			},
+		],
+	};
+
+	const ads = {
+		items: [
+			{
+				id: '1',
+				img: 'https://i.ytimg.com/vi/XqFY5fuYy3c/maxresdefault.jpg',
+				link: 'http://www.google.com',
+			},
+			{
+				id: '2',
+				img: 'https://miro.medium.com/max/700/1*B9uqLg7-TM2-bAIwa7Zxuw.png',
+				link: 'http://www.google.com',
+			},
+			{
+				id: '3',
+				img:
+					'https://img.scoop.it/793mdNkyAMHaVgpUroyXYjl72eJkfbmt4t8yenImKBVvK0kTmF0xjctABnaLJIm9',
+				link: 'http://www.google.com',
+			},
+			{
+				id: '4',
+				img:
+					'https://www.humanesocietymiami.org/wp-content/uploads/2020/04/Adopt-a-shelter-pet-today_cat-2000px-768x522.jpg',
+				link: 'http://www.google.com',
+			},
+			{
+				id: '5',
+				img: 'https://i.ytimg.com/vi/XqFY5fuYy3c/maxresdefault.jpg',
+				link: 'http://www.google.com',
+			},
+			{
+				id: '6',
+				img:
+					'https://www.humanesocietymiami.org/wp-content/uploads/2020/04/Adopt-a-shelter-pet-today_cat-2000px-768x522.jpg',
+				link: 'http://www.google.com',
+			},
+		],
+	};
+
+	const noticias = {
+		items: [
+			{
+				id: '1',
+				img:
+					'https://www.lavanguardia.com/r/GODO/LV/p7/WebSite/2020/07/18/Recortada/20200717-637305883725291135_20200717131506-kw6G-WBFI8V8ALDVBVHL8-992x558@LaVanguardia-Web.jpg',
+				title:
+					'El Govern responsabiliza a cada ciudadano de que no haya contagios',
+				description:
+					'Trece ciudades del área metropolitana de Barcelona, 2,6 millones de personas, así como los habitantes de la Noguera y todo el Segrià, han sido impelidos a quedarse en casa todo lo que sea posible durante estos próximos quince días. “No salgan ni se vayan de fin de semana”, recomendaron los tres consellers, Alba Vergés, Meritxell Budó y Miquel Buch, que anunciaron las nuevas medidas de restricción. No participó como se creía la alcaldesa de Barcelona, Ada Colau.',
+			},
+			{
+				id: '2',
+				img:
+					'https://www.lavanguardia.com/r/GODO/LV/p7/WebSite/2020/07/18/Recortada/img_aservian_20200714-125517_imagenes_lv_terceros_foto_3674677-kvjH-W2B9AA9WD0D9G5GJ-992x558@LaVanguardia-Web.JPG',
+				title:
+					'El 50% de los españoles no se irá de vacaciones por el virus o la economía',
+				description:
+					'Está claro que estamos ante un verano diferente. Así de tajante se manifestó ayer Rosario Pedrosa, responsable del área de estrategia comercial y marketing de Aecoc, la asociación de empresas de gran consumo, durante la presentación del estudio anual que realiza para analizar las tendencias de gasto de las familias en esta temporada del año.',
 			},
 		],
 	};
@@ -186,13 +289,14 @@ function App() {
 	return (
 		<div>
 			<NavBar />
+			<Cart carrito={carritoInitial} />
 			<Switch>
 				<Route exact path="/">
 					<Home
 						carouselData={carousel}
 						ads={ads}
 						posts={posts}
-						setPosts={setPosts}
+						noticias={noticias}
 					/>
 				</Route>
 
@@ -204,6 +308,9 @@ function App() {
 						setComentarios={setComentariosRecetas}
 					/>
 				</Route>
+				<Route exact path="/recetas/add">
+					<AddReceta recetas={recetas} setRecetas={setRecetas} />
+				</Route>
 				<Route exact path="/productos">
 					<Productos
 						productos={productos}
@@ -211,15 +318,19 @@ function App() {
 						setCarrito={setCarrito}
 					/>
 				</Route>
-				<Route path="/recetas/add">
-					<AddReceta recetas={recetas} setRecetas={setRecetas} />
+				<Route exact path="/newProduct">
+					<NuevoProducto productos={productos} setProductos={setProductos} />
 				</Route>
 				<Route exact path="/login" component={Login} />
 				<Route exact path="/signup" component={Signup} />
 				<Route exact path="/account-created" component={AccountCreated} />
 				<Route exact path="/forgot" component={Forgot} />
-				<Route exact path="/carrito" component={Carrito} />
-				<Route exact path="/posts/add" component={AddPostForm} />
+				<Route exact path="/carrito">
+					<Carrito productos={productos} carrito={carrito} />
+				</Route>
+				<Route exact path="/posts/add">
+					<AddPostForm posts={posts} setPosts={setPosts} />
+				</Route>
 			</Switch>
 			<Footer />
 		</div>
