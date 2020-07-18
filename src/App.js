@@ -21,80 +21,9 @@ import AddReceta from './components/AddReceta';
 import PostsList from './components/PostsList';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import AddPostForm from './components/AddPostForm';
+import AddComentForm from './components/AddComentForm';
 
 function App() {
-	const carousel = {
-		items: [
-			{
-				id: '1',
-				img:
-					'https://images.unsplash.com/photo-1551818905-29c07d4802d0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1728&q=80',
-				alt: 'Sección de recetas',
-				title: 'Nuestras recetas',
-				subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-				cta: 'Ver recetas',
-				link: '/recetas',
-			},
-			{
-				id: '2',
-				img:
-					'https://images.unsplash.com/photo-1526470498-9ae73c665de8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1204&q=80',
-				alt: 'Sección de productos',
-				title: 'Nuestros productos',
-				subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-				cta: 'Ver productos',
-				link: '/productos',
-			},
-		],
-	};
-
-	const ads = {
-		items: [
-			{
-				id: '1',
-				img: 'http://img1',
-				link: 'http://www.google.com',
-			},
-			{
-				id: '2',
-				img: 'http://img2',
-				link: 'http://www.google.com',
-			},
-		],
-	};
-
-	const noticias = {
-		items: [
-			{
-				id: '1',
-				img: 'http://img1',
-				title: 'titulo de la noticia',
-				description: 'descripcion de la noticia',
-			},
-			{
-				id: '2',
-				img: 'http://img2',
-				title: 'titulo de la noticia',
-				description: 'descripcion de la noticia',
-			},
-		],
-	};
-
-	const postsInitial = {
-		items: [
-			{
-				id: '1',
-				title: 'titulo del post',
-				description: 'descripcion del post',
-			},
-			{
-				id: '2',
-				title: 'titulo del post',
-				description: 'descripcion del post',
-			},
-		],
-	};
-
 	const carousel = {
 		items: [
 			{
@@ -310,6 +239,12 @@ function App() {
 				</Route>
 				<Route exact path="/recetas/add">
 					<AddReceta recetas={recetas} setRecetas={setRecetas} />
+				</Route>
+				<Route exact path="/comentarios/add/:recetaId">
+					<AddComentForm
+						comentarios={comentariosRecetas}
+						setComentarios={setComentariosRecetas}
+					/>
 				</Route>
 				<Route exact path="/productos">
 					<Productos

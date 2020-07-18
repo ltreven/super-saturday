@@ -35,7 +35,7 @@ function Recetas(props) {
 							<Card.Body>
 								<Comentarios
 									recetaId={receta.id}
-									comentarios={props.comentariosRecetas}
+									comentarios={props.comentarios}
 									setComentariosRecetas={props.setComentariosRecetas}
 								/>
 							</Card.Body>
