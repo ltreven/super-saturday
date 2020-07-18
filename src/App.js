@@ -22,19 +22,19 @@ function App() {
   const carousel = {
     items: [{
       id: "1",
-      img: "https://recetasveganas.net/wp-content/uploads/2020/07/recetas-tacos-sin-carne-vegetariano-alubias-aguacate-tomate-olivas2-1100x663.jpg",
+      img: "https://images.unsplash.com/photo-1551818905-29c07d4802d0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1728&q=80",
       alt: "Sección de recetas",
       title: "Nuestras recetas",
-      subtitle: "je<ndfsksfw",
+      subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       cta: "Ver recetas",
       link: "/recetas"
     },
     {
       id: "2",
-      img: "https://recetasveganas.net/wp-content/uploads/2020/07/pancakes-calabaza-veganos-faciles-receta-vegetariana-sin-huevo2-1100x663.jpg",
+      img: "https://images.unsplash.com/photo-1526470498-9ae73c665de8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1204&q=80",
       alt: "Sección de productos",
       title: "Nuestros productos",
-      subtitle: "alskfnlas",
+      subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       cta: "Ver productos",
       link: "/productos"
     }]
