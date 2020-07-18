@@ -28,12 +28,32 @@ function App() {
   const ads = {
     items: [{
       id: "1",
-      img: "http://img1",
+      img: "https://i.ytimg.com/vi/XqFY5fuYy3c/maxresdefault.jpg",
       link: "http://www.google.com"
     },
     {
       id: "2",
-      img: "http://img2",
+      img: "https://miro.medium.com/max/700/1*B9uqLg7-TM2-bAIwa7Zxuw.png",
+      link: "http://www.google.com"
+    },
+    {
+      id: "3",
+      img: "https://img.scoop.it/793mdNkyAMHaVgpUroyXYjl72eJkfbmt4t8yenImKBVvK0kTmF0xjctABnaLJIm9",
+      link: "http://www.google.com"
+    },
+    {
+      id: "4",
+      img: "https://www.humanesocietymiami.org/wp-content/uploads/2020/04/Adopt-a-shelter-pet-today_cat-2000px-768x522.jpg",
+      link: "http://www.google.com"
+    },
+    {
+      id: "5",
+      img: "https://i.ytimg.com/vi/XqFY5fuYy3c/maxresdefault.jpg",
+      link: "http://www.google.com"
+    },
+    {
+      id: "6",
+      img: "https://www.humanesocietymiami.org/wp-content/uploads/2020/04/Adopt-a-shelter-pet-today_cat-2000px-768x522.jpg",
       link: "http://www.google.com"
     }]
   }
