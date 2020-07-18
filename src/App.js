@@ -1,8 +1,12 @@
 import React, { useState } from 'react'
 import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Switch, Route } from 'react-router-dom'
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from './components/Home'
+import NavBar from './components/NavBar'
+import Footer from './components/Footer'
+
 import Recetas from './components/Recetas'
 import Productos from './components/Productos'
 import Login from './components/Login'
@@ -157,12 +161,11 @@ function App() {
 
   return (
     <div>
-      <h1>Navbar aqui</h1>
+      <NavBar />
       <Switch>
 
         <Route exact path="/">
           <Home carouselData={carousel} ads={ads} />
-          <PostsList posts={posts} />
         </Route>
 
         <Route exact path="/recetas">
@@ -177,6 +180,7 @@ function App() {
         <Route exact path="/carrito" component={Carrito} />
         <Route exact path="/posts/add" component={AddPostForm} />
       </Switch>
+      <Footer/>
     </div>
   );
 }
