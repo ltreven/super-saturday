@@ -9,7 +9,7 @@ import Footer from './components/Footer'
 
 import Recetas from './components/Recetas'
 import Productos from './components/Productos'
-import "bootstrap/dist/css/bootstrap.min.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Login from './components/Login'
 import Signup from './components/Signup/Signup'
 import Forgot from './components/Forgot'
@@ -195,7 +195,9 @@ function App() {
         <Route exact path="/signup" component={Signup} />
         <Route exact path="/account-created" component={AccountCreated} />
         <Route exact path="/forgot" component={Forgot} />
-        <Route exact path="/carrito" component={Carrito} />
+        <Route exact path="/carrito">
+          <Carrito productos={productos} carrito={carrito} />
+        </Route>
         <Route exact path="/posts/add">
           <AddPostForm posts={posts} setPosts={setPosts}/>
         </Route>
