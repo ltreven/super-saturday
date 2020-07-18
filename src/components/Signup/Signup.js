@@ -43,7 +43,7 @@ export class Signup extends Component {
             <div>
                  <form onSubmit={this.handleSubmit}>
                   <label>Email:</label>
-                  <input onChange={this.handleChange} type="text" name="email" value={this.state.email} />
+                  <input onChange={this.handleChange} type="email" name="email" value={this.state.email} />
 
                   <label>Contraseña:</label>
                   <input onChange={this.handleChange}  type="text" name="password" value={this.state.password} />
