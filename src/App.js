@@ -1,10 +1,14 @@
 import React, { useState } from 'react'
 import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Switch, Route } from 'react-router-dom'
+import "bootstrap/dist/css/bootstrap.min.css";
 import Home from './components/Home'
+import NavBar from './components/NavBar'
+import Footer from './components/Footer'
+
 import Recetas from './components/Recetas'
 import Productos from './components/Productos'
-
 import Login from './components/Login'
 import Signup from './components/Signup'
 import Forgot from './components/Forgot'
@@ -18,13 +22,21 @@ function App() {
   const carousel = {
     items: [{
       id: "1",
-      img: "http://img1",
-      link: "http://www.google.com"
+      img: "https://images.unsplash.com/photo-1551818905-29c07d4802d0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1728&q=80",
+      alt: "Sección de recetas",
+      title: "Nuestras recetas",
+      subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      cta: "Ver recetas",
+      link: "/recetas"
     },
     {
       id: "2",
-      img: "http://img2",
-      link: "http://www.google.com"
+      img: "https://images.unsplash.com/photo-1526470498-9ae73c665de8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1204&q=80",
+      alt: "Sección de productos",
+      title: "Nuestros productos",
+      subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      cta: "Ver productos",
+      link: "/productos"
     }]
   }
 
@@ -149,12 +161,11 @@ function App() {
 
   return (
     <div>
-      <h1>Navbar aqui</h1>
+      <NavBar />
       <Switch>
 
         <Route exact path="/">
           <Home carouselData={carousel} ads={ads} />
-          <PostsList posts={posts} user={user.username} />
         </Route>
 
         <Route exact path="/recetas">
@@ -169,6 +180,7 @@ function App() {
         <Route exact path="/carrito" component={Carrito} />
         <Route exact path="/posts/add" component={AddPostForm} />
       </Switch>
+      <Footer/>
     </div>
   );
 }

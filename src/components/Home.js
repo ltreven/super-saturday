@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import HomeCarousel from './HomeCarousel'
 
 function Home(props) {
 
@@ -20,6 +21,8 @@ function Home(props) {
             <br />
             <Link to="/recetas">Recetas</Link>
             <br />
+
+            <HomeCarousel carouselData={props.carouselData}/>
         </div>
     )
 }
