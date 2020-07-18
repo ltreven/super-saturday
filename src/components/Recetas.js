@@ -9,6 +9,8 @@ import {
 	Accordion,
 	Card,
 } from 'react-bootstrap';
+// import Comentarios from './components/Comentarios';
+// import AddReceta from './components/AddReceta';
 
 function Recetas(props) {
 	const [modalShow, setModalShow] = React.useState(false);
