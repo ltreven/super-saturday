@@ -165,7 +165,7 @@ function App() {
       <Switch>
 
         <Route exact path="/">
-          <Home carouselData={carousel} ads={ads} />
+          <Home carouselData={carousel} ads={ads} user={user} posts={posts} />
         </Route>
 
         <Route exact path="/recetas">
@@ -180,7 +180,7 @@ function App() {
         <Route exact path="/carrito" component={Carrito} />
         <Route exact path="/posts/add" component={AddPostForm} />
       </Switch>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
