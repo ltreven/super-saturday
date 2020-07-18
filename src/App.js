@@ -154,7 +154,7 @@ function App() {
 
         <Route exact path="/">
           <Home carouselData={carousel} ads={ads} />
-          <PostsList posts={posts} />
+          <PostsList posts={posts} user={user.username} />
         </Route>
 
         <Route exact path="/recetas">
