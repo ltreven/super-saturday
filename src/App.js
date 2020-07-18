@@ -1,8 +1,12 @@
 import React, { useState } from 'react'
 import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Switch, Route } from 'react-router-dom'
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from './components/Home'
+import NavBar from './components/NavBar'
+import Footer from './components/Footer'
+
 import Recetas from './components/Recetas'
 import Productos from './components/Productos'
 import Login from './components/Login'
@@ -18,19 +22,19 @@ function App() {
   const carousel = {
     items: [{
       id: "1",
-      img: "https://recetasveganas.net/wp-content/uploads/2020/07/recetas-tacos-sin-carne-vegetariano-alubias-aguacate-tomate-olivas2-1100x663.jpg",
+      img: "https://images.unsplash.com/photo-1551818905-29c07d4802d0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1728&q=80",
       alt: "Sección de recetas",
       title: "Nuestras recetas",
-      subtitle: "je<ndfsksfw",
+      subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       cta: "Ver recetas",
       link: "/recetas"
     },
     {
       id: "2",
-      img: "https://recetasveganas.net/wp-content/uploads/2020/07/pancakes-calabaza-veganos-faciles-receta-vegetariana-sin-huevo2-1100x663.jpg",
+      img: "https://images.unsplash.com/photo-1526470498-9ae73c665de8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1204&q=80",
       alt: "Sección de productos",
       title: "Nuestros productos",
-      subtitle: "alskfnlas",
+      subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       cta: "Ver productos",
       link: "/productos"
     }]
@@ -157,12 +161,11 @@ function App() {
 
   return (
     <div>
-      <h1>Navbar aqui</h1>
+      <NavBar />
       <Switch>
 
         <Route exact path="/">
           <Home carouselData={carousel} ads={ads} />
-          <PostsList posts={posts} user={user.username} />
         </Route>
 
         <Route exact path="/recetas">
@@ -177,6 +180,7 @@ function App() {
         <Route exact path="/carrito" component={Carrito} />
         <Route exact path="/posts/add" component={AddPostForm} />
       </Switch>
+      <Footer/>
     </div>
   );
 }
