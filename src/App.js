@@ -84,19 +84,25 @@ function App() {
   const [posts, setPosts] = useState(postsInitial)
 
   const recetasInitial = {
-    items: [{
-      id: "1",
-      img: "http://imgdelareceta",
-      title: "titulo de la receta 1",
-      description: "descripcion de la receta"
-    },
-    {
-      id: "2",
-      img: "http://imgdelareceta",
-      title: "titulo de la receta 2",
-      description: "descripcion de la receta"
-    }]
-  }
+		items: [
+			{
+				id: '1',
+				img:
+					'https://recetasderechupete.com/wp-content/uploads/2020/05/Fideuá-de-mariscos-525x360.jpg',
+				title: 'Fideuá',
+				description:
+					'Empezamos preparando el alioli, estás versiones con huevo no son las más puristas (el alioli original no lleva huevo ni limón) pero se prepara rápido cómo una mayonesa y queda muy rico. Ponemos todos los ingredientes del alioli de nueces en el vaso de la batidora. Dejamos el brazo de la batidora tocando el fondo y empezamos a batir sin moverlo. Al poco tiempo empezará a emulsionar, en ese momento empezamos a subir con suavidad y acabamos con movimientos verticales, moviendo de arriba a abajo. Pasamos el alioli a un bol y lo tapamos con papel film. Lo guardamos en el frigorífico hasta el momento de servir. Preparación de la fideuá de pescado y marisco. Troceamos los pimientos, el tomate, la cebolla y los ajos. Si no nos gusta encontrar muchos tropezones lo picamos todo muy fino o usamos una batidora. Troceamos también la sepia y el rape (o pedimos en la pescadería que nos lo preparen ya así para saltarnos este paso). Cocemos los mejillones al vapor o al microondas. No es mala idea preparar más mejillones de los que necesita la fideuá y servirlos cómo aperitivo. Ponemos la paella a fuego medio bajo, si la paella es muy grande necesitaremos un quemador especial, estás pequeñas para cuatro personas funcionan bien en la cocina normal de casa. Echamos un poco de aceite y cuando esté caliente doramos los langostinos un par de minutos por cada lado, no necesitan más tiempo porque se acabarán de hacer cuando acabemos la fideuá. Los sacamos de la paella y reservamos. Doramos también el rape, con 4-5 minutos será suficiente. Lo sacamos de la paella y reservamos. Repetimos el mismo proceso con la sepia. Puede que necesite unos minutos más, lo ideal es que la probemos y cuando esté tierna la sacamos de la paella y reservamos. Añadimos más aceite a la paella. Sofreímos la cebolla y los ajos unos cinco minutos hasta que empiecen a tener color. Añadimos los pimientos y sofreímos otros diez minutos removiendo con frecuencia para que no se queme ningún ingrediente ni se peguen a la paella. Añadimos más aceite si es necesario. Cuando todo esté bien pochado es el momento de añadir el tomate y sal al gusto (sin pasarnos si el caldo de pescado es muy salado). Rehogamos 8-10 minutos más para que todo quede bien cocinado y tenga buen sabor. El sofrito es una parte muy importante de la fideuá y lo que conseguirá que no quede sosa.',
+			},
+			{
+				id: '2',
+				img:
+					'https://www.recetasderechupete.com/wp-content/uploads/2016/08/Tortilla-de-patatas-525x360.jpg',
+				title: 'Tortilla de Patatas',
+				description:
+					'Pelamos las patatas, las lavamos para quitar restos de suciedad y muy importante, las secamos. Cortamos en láminas semifinas, a mí no me gusta que se deshagan sino que al freírlas se tuesten un poco. Las colocamos en un bol grande, donde luego vamos a mezclar con el huevo y añadimos sal al gusto. Removemos bien y reservamos. Elegimos nuestra sartén más grande y antiadherente. La ponemos al fuego y añadimos un buen aceite de oliva virgen extra. No tengáis miedo en gastaros un poco de dinero en aceite, le va a dar ese punto de sabor que distingue vuestra tortilla de las demás, podéis emplear muchas variedades: arbequina, picual, cornicabra, hojiblanca, royal… el que más os guste, pero de calidad. Introducimos las patatas cortadas y ya saladas y dejamos que se cocinen durante aproximadamente veinte minutos a fuego bajo. El tema del grosor de las patatas también va a gustos. Hay quien prefiere cortarlas a trozos muy pequeños, en láminas muy finas que casi se rompan al freír y o más bien grandes. Mientras se están friendo las patatas, en el bol donde luego vamos a echar las patatas batimos los huevos, reservamos. Pelamos la cebolla y cortamos lo más fino posible. En otra sartén calentamos aceite de oliva y añadimos los trozos de cebolla. Pochamos hasta que tenga un color dorado, que tenga un punto de caramelización pero sin llegar a quemarse. La cebolla se hará antes que las patatas, así que escurrimos y añadimos al bol con el huevo batido.',
+			},
+		],
+	};
 
   const [recetas, setRecetas] = useState(recetasInitial)
 
