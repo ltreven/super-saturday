@@ -182,7 +182,7 @@ function App() {
       <Switch>
 
         <Route exact path="/">
-          <Home carouselData={carousel} ads={ads} posts={posts} />
+          <Home carouselData={carousel} ads={ads} posts={posts} noticias={noticias} />
         </Route>
 
         <Route exact path="/recetas">

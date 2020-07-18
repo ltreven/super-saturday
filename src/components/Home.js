@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import AddPostForm from './AddPostForm';
 import HomeCarousel from './HomeCarousel'
 import Noticias from "./Noticias";
 import PostsList from './PostsList'
