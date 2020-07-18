@@ -11,9 +11,10 @@ import Recetas from './components/Recetas'
 import Productos from './components/Productos'
 import "bootstrap/dist/css/bootstrap.min.css";
 import Login from './components/Login'
-import Signup from './components/Signup'
+import Signup from './components/Signup/Signup'
 import Forgot from './components/Forgot'
 import Carrito from './components/Carrito'
+import AccountCreated from "./components/Signup/AccountCreated"
 import AddReceta from './components/AddReceta'
 import PostsList from './components/PostsList'
 import AddPostForm from './components/AddPostForm'
@@ -184,6 +185,7 @@ function App() {
         </Route>
         <Route exact path="/login" component={Login} />
         <Route exact path="/signup" component={Signup} />
+        <Route exact path="/account-created" component={AccountCreated} />
         <Route exact path="/forgot" component={Forgot} />
         <Route exact path="/carrito" component={Carrito} />
         <Route exact path="/posts/add" component={AddPostForm} />
