@@ -5,7 +5,7 @@ import {Form,  FormGroup, FormControl, Button } from 'react-bootstrap'
 const AddReceta = props => {
     const allRecipes = [...props.recetas.items]
     const initialState = {
-        id: String(allRecipes.length),
+        id: String(allRecipes.length + 1),
         title: '',
         description: '',
         img: ''
