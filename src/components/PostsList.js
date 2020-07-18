@@ -1,5 +1,6 @@
 import React from 'react'
 import { Card, Button } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 
 
@@ -25,11 +26,11 @@ export default function PostsList(props) {
                 </Card>
             )}
 
-            <Card.Link to='/posts/add'>
+            <Link to='/posts/add'>
                 <Button variant="outline-info" size='sm'>
                     Add Post
                 </Button>
-            </Card.Link>
+            </Link>
 
         </div>
     )
