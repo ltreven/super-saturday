@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Noticias from "./Noticias";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function Home(props) {
   return (
@@ -19,6 +20,7 @@ function Home(props) {
       <Link to="/recetas">Recetas</Link>
       <br />
      
+
         <Noticias noticias={props.noticias}/>
      
     </div>

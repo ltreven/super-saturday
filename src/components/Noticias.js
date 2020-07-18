@@ -7,13 +7,13 @@ function Noticias(props) {
     <div className="card-body">
       <div className="card promoting-card">
         <div className="view overlay">
-          <img classNAme="card-img-left rounded-0" src={noticia.img} alt={noticia.title}/>
+          <img className="card-img-left rounded-0" src={noticia.img} alt={noticia.title}/>
         </div>
 
         <h4 className="card-title font-weight-bold mb-2">{noticia.title}</h4>
 
         <p className="card-text">
-          <i className="far fa-clock pr-2"></i>
+          <i className="far fa-clock pr-2">14-5-2020</i>
         
         </p>
         <div className="collapse-content">
