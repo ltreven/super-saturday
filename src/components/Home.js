@@ -1,7 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function Home() {
+function Home(props) {
+
+    console.log("Natalia, aqui están los datos de tu carousel: ", props.carouselData)
+
     return (
         <div>
             <h1>Homepage</h1>

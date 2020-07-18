@@ -148,7 +148,11 @@ function App() {
     <div>
       <h1>Navbar aqui</h1>
       <Switch>
-        <Route exact path="/" component={Home} />
+
+        <Route exact path="/">
+          <Home carouselData={carousel} ads={ads}  />
+        </Route>
+
         <Route exact path="/recetas">
           <Recetas recetas={recetas} setRecetas={setRecetas} comentarios={comentariosRecetas} setComentarios={setComentariosRecetas} />
         </Route>
