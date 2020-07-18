@@ -14,13 +14,12 @@ export default class NavBar extends Component {
                         height="40"
                         className="d-inline-block align-top"
                     />
-                    
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mr-auto">
                             <NavLink className="links" to="/">Home</NavLink>
-                            <NavLink className="links" to="/signUp">Productos</NavLink>
+                            <NavLink className="links" to="/productos">Productos</NavLink>
                             <NavLink className="links" to="/recetas">Recetas</NavLink>
                             <NavLink className="links login" to="/login">Login</NavLink>
                             <NavLink className="links login" to="/signUp">Sign Up</NavLink>

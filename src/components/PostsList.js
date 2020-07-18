@@ -27,7 +27,6 @@ export default function PostsList(props) {
                     Add Post
                 </Button>
             </Card.Link>
-
         </div>
     )
 }
