@@ -2,10 +2,11 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import AdsContainer from './AdsContainer'
 import HomeCarousel from './HomeCarousel'
+import Noticias from "./Noticias";
+import PostsList from './PostsList'
 
 function Home(props) {
-
-    console.log("Natalia, aqui están los datos de tu carousel: ", props.carouselData)
+    const {posts, setPosts} = props;
 
     return (
         <div>
@@ -22,8 +23,10 @@ function Home(props) {
             <br />
             <Link to="/recetas">Recetas</Link>
             <br />
-            <HomeCarousel carouselData={props.carouselData}/>
+            <HomeCarousel carouselData={props.carouselData} />
             <AdsContainer ads={props.ads} />
+            <PostsList user={props.user} posts={props.posts} />
+            <Noticias noticias={props.noticias}/>
         </div>
     )
 }
