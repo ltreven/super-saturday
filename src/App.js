@@ -14,6 +14,7 @@ import Login from './components/Login'
 import Signup from './components/Signup/Signup'
 import Forgot from './components/Forgot'
 import Carrito from './components/Carrito'
+import NuevoProducto from './components/NuevoProducto'
 import AccountCreated from "./components/Signup/AccountCreated"
 import AddReceta from './components/AddReceta'
 import PostsList from './components/PostsList'
@@ -190,6 +191,9 @@ function App() {
         </Route>
         <Route exact path="/productos">
           <Productos productos={productos} setProductos={setProductos} setCarrito={setCarrito} />
+        </Route>
+        <Route exact path="/newProduct">
+          <NuevoProducto productos={productos} setProductos={setProductos} />
         </Route>
         <Route exact path="/login" component={Login} />
         <Route exact path="/signup" component={Signup} />
