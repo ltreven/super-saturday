@@ -5,17 +5,33 @@ function Productos(props) {
 
     const addProduct = (id) => {
         props.setCarrito( carrito => {
-            const updateCarrito = carrito.items.map(item => {
+
+            const isInCart = carrito.items.find(item => item.productId === id )
+
+            const addNewProduct = () => {
+                const newProduct = {
+                    productId: id,
+                    quantity: 1
+                }
+                return [...carrito.items, newProduct]
+            }
+
+            const updateQuantity = carrito.items.map(item => {
                 const isCurrentCarrito = item.productId === id;
-                const quantity = isCurrentCarrito ? item.quantity + 1 : item.quantity
+                const quantity = isCurrentCarrito ? item.quantity + 1 : item.quantity;
                 return {...item, quantity}
-            })
-            return {items: updateCarrito}
+            })  
+
+            if (isInCart) {
+                return {items: updateQuantity}
+            }
+
+            return {items: addNewProduct()}
         })
     } 
 
     const show = props.productos.items.map(producto => (
-        <div className="d-flex">
+        <div className="d-flex" key={producto.id}>
             <img src={producto.img} alt={producto.name}/>
             <div>
                 <h3>{producto.title}</h3>
