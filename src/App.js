@@ -190,7 +190,7 @@ function App() {
         <Route exact path="/carrito" component={Carrito} />
         <Route exact path="/posts/add" component={AddPostForm} />
       </Switch>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
