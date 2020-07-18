@@ -211,6 +211,9 @@ function App() {
 						setCarrito={setCarrito}
 					/>
 				</Route>
+				<Route path="/recetas/add">
+					<AddReceta recetas={recetas} setRecetas={setRecetas} />
+				</Route>
 				<Route exact path="/login" component={Login} />
 				<Route exact path="/signup" component={Signup} />
 				<Route exact path="/account-created" component={AccountCreated} />
