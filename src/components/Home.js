@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import AddPostForm from './AddPostForm';
 import HomeCarousel from './HomeCarousel'
+import Noticias from "./Noticias";
 
 function Home(props) {
     const {posts, setPosts} = props;
@@ -23,6 +24,7 @@ function Home(props) {
             <br />
             <HomeCarousel carouselData={props.carouselData}/>
             <AddPostForm posts={posts} setPosts={setPosts} />
+            <Noticias noticias={props.noticias}/>
         </div>
     )
 }
