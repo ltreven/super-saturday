@@ -1,19 +1,17 @@
 import React, {useState} from 'react'
-
+import {Form,  FormGroup, FormControl, Button } from 'react-bootstrap'
 
 const AddReceta = props => {
 
-    const allRecipes = [...props.recetas.items]
+    //const allRecipes = [...props.recetas.items]
     const initialState = {
-        id: String(allRecipes.length),
+        //id: String(allRecipes.length),
         title: '',
         description: '',
         img: ''
     }
 
     const [recipe, setRecipe] = useState(initialState)
-
-
 
     const handleChange = ({target}) => {
         setRecipe({
@@ -34,15 +32,21 @@ const AddReceta = props => {
 
     return (
         <div>
-           <form onSubmit={handleSubmit}>
-               <label htmlFor="">Title</label>
-               <input type="text" name="title" onChange={handleChange} value={recipe.title}/>
-               <label htmlFor="">Description</label>
-               <input type="text" name="description" onChange={handleChange} value={recipe.description}/>
-               <label htmlFor="">Picture URL</label>
-               <input type="text" name="img" onChange={handleChange} value={recipe.img}/>
-               <button type="submit">SAVE</button>
-            </form> 
+           <Form onSubmit={handleSubmit}>
+               <FormGroup>
+                <Form.Label htmlFor="title">Title</Form.Label>
+                <FormControl type="text" name="title" onChange={handleChange} value={recipe.title}/>
+               </FormGroup>
+               <FormGroup>
+               <Form.Label htmlFor="description">Description</Form.Label>
+               <FormControl type="text" name="description" onChange={handleChange} value={recipe.description}/>
+               </FormGroup>
+               <FormGroup>
+               <Form.Label htmlFor="img">Picture URL</Form.Label>
+               <FormControl type="text" name="img" onChange={handleChange} value={recipe.img}/>
+               </FormGroup>
+               <Button variant="primary" type="submit">SAVE</Button>
+            </Form> 
         </div>
     )
 }

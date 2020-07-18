@@ -148,7 +148,6 @@ function App() {
   return (
     <div>
       <h1>Navbar aqui</h1>
-      <AddReceta/>
       <Switch>
 
         <Route exact path="/">
