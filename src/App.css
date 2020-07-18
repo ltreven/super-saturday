@@ -1,3 +1,24 @@
+.adsContainer {
+    overflow: auto;
+    white-space: nowrap;
+    margin: 40px 20px;
+  }
+
+.adsContainer li {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+
+.adsContainer a:hover {
+    background-color: #777;
+}
+
+.adsContainer img {
+    height: 250px;
+}
 .boton-new{
     font-size: 10pt;
     font-weight: bold;
@@ -59,7 +80,6 @@ footer ul{
     margin: 10px;
     font-size: 40px
 }
-
 .collapse-content .fa.fa-heart:hover {
     color: #f44336 !important;
 }

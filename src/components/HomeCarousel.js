@@ -1,5 +1,6 @@
 import React from 'react'
 import { Carousel, Button } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 function HomeCarousel(props) {
     const allSlides = props.carouselData.items.map(slide => {
@@ -12,7 +13,9 @@ function HomeCarousel(props) {
             <Carousel.Caption>
               <h3>{slide.title}</h3>
               <p className="mb-5">{slide.subtitle}</p>
-              <Button href={slide.link} variant="light" size="lg" className="mb-5">{slide.cta}</Button>
+              <Link to={slide.link}>
+                <Button variant="light" size="lg" className="mb-5">{slide.cta}</Button>
+              </Link>
             </Carousel.Caption>
           </Carousel.Item>)
     })
